@@ -1,0 +1,146 @@
+{
+	"_id": "627234030b924a1a99d1ca48",
+	"type": "form",
+	"tags": [],
+	"owner": "626fd47a9f811a762313ba07",
+	"components": [
+		{
+			"label": "Text Field",
+			"tableView": true,
+			"key": "textField",
+			"type": "textfield",
+			"input": true
+		},
+		{
+			"label": "Number",
+			"mask": false,
+			"tableView": false,
+			"delimiter": false,
+			"requireDecimal": false,
+			"inputFormat": "plain",
+			"truncateMultipleSpaces": false,
+			"key": "number",
+			"type": "number",
+			"input": true
+		},
+		{
+			"type": "button",
+			"label": "Submit",
+			"key": "submit",
+			"disableOnInvalid": true,
+			"input": true,
+			"tableView": false
+		}
+	],
+	"revisions": "",
+	"_vid": 0,
+	"title": "Form1",
+	"display": "form",
+	"access": [
+		{
+			"roles": [],
+			"type": "create_own"
+		},
+		{
+			"roles": [],
+			"type": "create_all"
+		},
+		{
+			"roles": [],
+			"type": "read_own"
+		},
+		{
+			"roles": [
+				"627233d00b924a43a3d1c6f9",
+				"627233d00b924a6185d1c6fe",
+				"627233d00b924a9145d1c703"
+			],
+			"type": "read_all"
+		},
+		{
+			"roles": [],
+			"type": "update_own"
+		},
+		{
+			"roles": [],
+			"type": "update_all"
+		},
+		{
+			"roles": [],
+			"type": "delete_own"
+		},
+		{
+			"roles": [],
+			"type": "delete_all"
+		},
+		{
+			"roles": [],
+			"type": "team_read"
+		},
+		{
+			"roles": [],
+			"type": "team_write"
+		},
+		{
+			"roles": [],
+			"type": "team_admin"
+		}
+	],
+	"submissionAccess": [
+		{
+			"roles": [
+				"627233d00b924a9145d1c703"
+			],
+			"type": "create_own"
+		},
+		{
+			"roles": [],
+			"type": "create_all"
+		},
+		{
+			"roles": [],
+			"type": "read_own"
+		},
+		{
+			"roles": [],
+			"type": "read_all"
+		},
+		{
+			"roles": [],
+			"type": "update_own"
+		},
+		{
+			"roles": [],
+			"type": "update_all"
+		},
+		{
+			"roles": [],
+			"type": "delete_own"
+		},
+		{
+			"roles": [],
+			"type": "delete_all"
+		},
+		{
+			"roles": [],
+			"type": "team_read"
+		},
+		{
+			"roles": [],
+			"type": "team_write"
+		},
+		{
+			"roles": [],
+			"type": "team_admin"
+		}
+	],
+	"controller": "",
+	"properties": {},
+	"settings": {},
+	"name": "form1",
+	"path": "form1",
+	"project": "627233d00b924a2803d1c6f2",
+	"created": "2022-05-04T08:06:27.238Z",
+	"modified": "2022-05-04T08:07:17.323Z",
+	"machineName": "ucobwatlibrybyy:form1"
+}
