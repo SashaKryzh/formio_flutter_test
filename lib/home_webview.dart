@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-
-//
-// !!! NOT IMPLEMENTED !!!
-//
+import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late final WebViewController _controller;
+  late final WebViewPlusController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -22,20 +17,23 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Form.io test'),
       ),
-      body: WebView(
-        initialUrl: 'about:blank',
-        onWebViewCreated: (controller) {
-          _controller = controller;
-          _loadForm();
-        },
-        debuggingEnabled: true,
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        child: WebViewPlus(
+          initialUrl: 'about:blank',
+          onWebViewCreated: (controller) {
+            _controller = controller;
+            _loadForm();
+          },
+          debuggingEnabled: true,
+          javascriptMode: JavascriptMode.unrestricted,
+        ),
       ),
     );
   }
 
   void _loadForm() async {
-    final html = await rootBundle.loadString('assets/form.html');
-    _controller.loadHtmlString(html);
+    _controller.loadUrl('assets/form.html');
     // _controller.loadUrl(
     //     'https://decode.agency/article/form-io-in-native-android-application/');
   }
