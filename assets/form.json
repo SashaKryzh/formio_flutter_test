@@ -1,8 +1,4 @@
 {
-	"_id": "627234030b924a1a99d1ca48",
-	"type": "form",
-	"tags": [],
-	"owner": "626fd47a9f811a762313ba07",
 	"components": [
 		{
 			"label": "Text Field",
@@ -24,6 +20,103 @@
 			"input": true
 		},
 		{
+			"label": "Date / Time",
+			"tableView": false,
+			"datePicker": {
+				"disableWeekends": false,
+				"disableWeekdays": false
+			},
+			"enableMinDateInput": false,
+			"enableMaxDateInput": false,
+			"key": "dateTime",
+			"type": "datetime",
+			"input": true,
+			"widget": {
+				"type": "calendar",
+				"displayInTimezone": "viewer",
+				"locale": "en",
+				"useLocaleSettings": false,
+				"allowInput": true,
+				"mode": "single",
+				"enableTime": true,
+				"noCalendar": false,
+				"format": "yyyy-MM-dd hh:mm a",
+				"hourIncrement": 1,
+				"minuteIncrement": 1,
+				"time_24hr": false,
+				"minDate": null,
+				"disableWeekends": false,
+				"disableWeekdays": false,
+				"maxDate": null
+			}
+		},
+		{
+			"label": "Email",
+			"tableView": true,
+			"key": "email",
+			"type": "email",
+			"input": true
+		},
+		{
+			"label": "Phone Number",
+			"tableView": true,
+			"key": "phoneNumber",
+			"type": "phoneNumber",
+			"input": true
+		},
+		{
+			"label": "Select",
+			"widget": "choicesjs",
+			"tableView": true,
+			"data": {
+				"values": [
+					{
+						"label": "Do not display radio",
+						"value": "a"
+					},
+					{
+						"label": "Display radio",
+						"value": "b"
+					}
+				]
+			},
+			"key": "select",
+			"type": "select",
+			"input": true
+		},
+		{
+			"label": "Radio",
+			"optionsLabelPosition": "right",
+			"inline": true,
+			"disabled": true,
+			"tableView": false,
+			"values": [
+				{
+					"label": "1",
+					"value": "1",
+					"shortcut": ""
+				},
+				{
+					"label": "2",
+					"value": "2",
+					"shortcut": ""
+				},
+				{
+					"label": "3",
+					"value": "3",
+					"shortcut": ""
+				}
+			],
+			"key": "radio",
+			"conditional": {
+				"show": true,
+				"when": "select",
+				"eq": "b"
+			},
+			"type": "radio",
+			"input": true
+		},
+		{
 			"type": "button",
 			"label": "Submit",
 			"key": "submit",
@@ -31,116 +124,5 @@
 			"input": true,
 			"tableView": false
 		}
-	],
-	"revisions": "",
-	"_vid": 0,
-	"title": "Form1",
-	"display": "form",
-	"access": [
-		{
-			"roles": [],
-			"type": "create_own"
-		},
-		{
-			"roles": [],
-			"type": "create_all"
-		},
-		{
-			"roles": [],
-			"type": "read_own"
-		},
-		{
-			"roles": [
-				"627233d00b924a43a3d1c6f9",
-				"627233d00b924a6185d1c6fe",
-				"627233d00b924a9145d1c703"
-			],
-			"type": "read_all"
-		},
-		{
-			"roles": [],
-			"type": "update_own"
-		},
-		{
-			"roles": [],
-			"type": "update_all"
-		},
-		{
-			"roles": [],
-			"type": "delete_own"
-		},
-		{
-			"roles": [],
-			"type": "delete_all"
-		},
-		{
-			"roles": [],
-			"type": "team_read"
-		},
-		{
-			"roles": [],
-			"type": "team_write"
-		},
-		{
-			"roles": [],
-			"type": "team_admin"
-		}
-	],
-	"submissionAccess": [
-		{
-			"roles": [
-				"627233d00b924a9145d1c703"
-			],
-			"type": "create_own"
-		},
-		{
-			"roles": [],
-			"type": "create_all"
-		},
-		{
-			"roles": [],
-			"type": "read_own"
-		},
-		{
-			"roles": [],
-			"type": "read_all"
-		},
-		{
-			"roles": [],
-			"type": "update_own"
-		},
-		{
-			"roles": [],
-			"type": "update_all"
-		},
-		{
-			"roles": [],
-			"type": "delete_own"
-		},
-		{
-			"roles": [],
-			"type": "delete_all"
-		},
-		{
-			"roles": [],
-			"type": "team_read"
-		},
-		{
-			"roles": [],
-			"type": "team_write"
-		},
-		{
-			"roles": [],
-			"type": "team_admin"
-		}
-	],
-	"controller": "",
-	"properties": {},
-	"settings": {},
-	"name": "form1",
-	"path": "form1",
-	"project": "627233d00b924a2803d1c6f2",
-	"created": "2022-05-04T08:06:27.238Z",
-	"modified": "2022-05-04T08:07:17.323Z",
-	"machineName": "ucobwatlibrybyy:form1"
+	]
 }
