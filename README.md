@@ -1,6 +1,6 @@
 # formio_test
 
-A new Flutter project.
+![Screenshot](resources/screenshot.png)
 
 ## Getting Started
 
