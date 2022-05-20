@@ -4,6 +4,7 @@
 			"label": "Select",
 			"widget": "choicesjs",
 			"tableView": true,
+			"defaultValue": "first",
 			"data": {
 				"values": [
 					{

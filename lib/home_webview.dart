@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   WebViewPlusController? _controller;
+  dynamic curJsonData;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,6 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           color: Colors.white,
           padding: const EdgeInsets.all(20),
-          width: 500,
           child: WebViewPlus(
             initialUrl: 'assets/form.html',
             onWebViewCreated: (controller) {
@@ -32,11 +32,11 @@ class _HomePageState extends State<HomePage> {
             },
             debuggingEnabled: true,
             javascriptMode: JavascriptMode.unrestricted,
-            onPageFinished: (_) => passFormToWebView(),
+            onPageFinished: (_) => initForm(),
             javascriptChannels: {
               JavascriptChannel(
                 name: 'formUpdated',
-                onMessageReceived: onUpdateForm,
+                onMessageReceived: onFormUpdated,
               ),
             },
           ),
@@ -45,20 +45,31 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void passFormToWebView() async {
-    final json = await rootBundle.loadString('assets/simple_form.json');
-    _controller?.webViewController.runJavascript('createForm($json, {})');
+  void initForm() async {
+    final form = await rootBundle.loadString('assets/simple_form.json');
+    _controller?.webViewController.runJavascript('createForm($form)');
   }
 
-  void onUpdateForm(JavascriptMessage msg) async {
-    print(msg.message);
+  void onFormUpdated(JavascriptMessage message) async {
+    print('Form data: ${message.message}');
 
-    final data = jsonDecode(msg.message);
-    if (data['select'] == 'second') {
-      final json = await rootBundle.loadString('assets/simple_form_2.json');
-      _controller?.webViewController.runJavascript(
-        'createForm($json, ${jsonEncode(data)})',
-      );
+    final newJsonData = jsonDecode(message.message);
+    if (curJsonData.toString() == newJsonData.toString()) {
+      return;
     }
+
+    curJsonData = newJsonData;
+
+    if (newJsonData['select'] == 'second') {
+      final form = await rootBundle.loadString('assets/simple_form_2.json');
+      updateForm(form, jsonEncode(newJsonData));
+    } else {
+      final form = await rootBundle.loadString('assets/simple_form.json');
+      updateForm(form, jsonEncode(newJsonData));
+    }
+  }
+
+  void updateForm(String form, [String? data]) {
+    _controller?.webViewController.runJavascript('updateForm($form, $data)');
   }
 }
