@@ -39,3 +39,5 @@ flutter:
     - assets/formio.full.min.js
     - assets/formio.full.min.css
     - assets/bootstrap.min.css
+    - assets/example_1.json
+    - assets/example_2.json

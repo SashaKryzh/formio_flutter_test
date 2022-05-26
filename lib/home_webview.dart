@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void initForm() async {
-    final form = await rootBundle.loadString('assets/simple_form.json');
+    final form = await rootBundle.loadString('assets/example_1.json');
     _controller?.webViewController.runJavascript('createForm($form)');
   }
 
@@ -61,10 +61,10 @@ class _HomePageState extends State<HomePage> {
     curJsonData = newJsonData;
 
     if (newJsonData['select'] == 'second') {
-      final form = await rootBundle.loadString('assets/simple_form_2.json');
+      final form = await rootBundle.loadString('assets/example_2.json');
       updateForm(form, jsonEncode(newJsonData));
     } else {
-      final form = await rootBundle.loadString('assets/simple_form.json');
+      final form = await rootBundle.loadString('assets/example_1.json');
       updateForm(form, jsonEncode(newJsonData));
     }
   }

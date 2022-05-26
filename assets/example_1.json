@@ -1,0 +1,65 @@
+{
+	"components": [
+		{
+			"label": "Select",
+			"widget": "choicesjs",
+			"tableView": true,
+			"data": {
+				"values": [
+					{
+						"label": "First",
+						"value": "first"
+					},
+					{
+						"label": "Second",
+						"value": "second"
+					}
+				]
+			},
+			"key": "select",
+			"type": "select",
+			"input": true
+		},
+		{
+			"label": "Select 2",
+			"widget": "choicesjs",
+			"tableView": true,
+			"data": {
+				"values": [
+					{
+						"label": "Left",
+						"value": "left"
+					},
+					{
+						"label": "Right",
+						"value": "right"
+					}
+				]
+			},
+			"key": "select2",
+			"type": "select",
+			"input": true
+		},
+		{
+			"label": "Radio",
+			"optionsLabelPosition": "right",
+			"inline": false,
+			"tableView": false,
+			"values": [
+				{
+					"label": "Yes",
+					"value": "yes",
+					"shortcut": ""
+				},
+				{
+					"label": "No",
+					"value": "no",
+					"shortcut": ""
+				}
+			],
+			"key": "radio",
+			"type": "radio",
+			"input": true
+		}
+	]
+}

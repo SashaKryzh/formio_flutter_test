@@ -1,0 +1,44 @@
+{
+	"components": [
+		{
+			"label": "Select",
+			"widget": "choicesjs",
+			"tableView": true,
+			"data": {
+				"values": [
+					{
+						"label": "First",
+						"value": "first"
+					},
+					{
+						"label": "Second",
+						"value": "second"
+					}
+				]
+			},
+			"key": "select",
+			"type": "select",
+			"input": true
+		},
+		{
+			"label": "Select 2",
+			"widget": "choicesjs",
+			"tableView": true,
+			"data": {
+				"values": [
+					{
+						"label": "Left",
+						"value": "left"
+					},
+					{
+						"label": "Right",
+						"value": "right"
+					}
+				]
+			},
+			"key": "select2",
+			"type": "select",
+			"input": true
+		}
+	]
+}
