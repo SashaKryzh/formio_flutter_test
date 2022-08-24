@@ -1,0 +1,54 @@
+{
+	"_id": "6304ade7c2735ccb04a6dac8",
+	"type": "form",
+	"tags": [],
+	"owner": "626fd47a9f811a762313ba07",
+	"components": [
+		{
+			"label": "Text Field",
+			"tableView": true,
+			"validate": {
+				"required": true,
+				"maxLength": 5
+			},
+			"key": "textField",
+			"type": "textfield",
+			"input": true
+		},
+		{
+			"label": "Text Field",
+			"tableView": true,
+			"validateOn": "blur",
+			"validate": {
+				"required": true
+			},
+			"key": "textField1",
+			"type": "textfield",
+			"input": true
+		}
+	],
+	"revisions": "",
+	"_vid": 0,
+	"title": "text_field_test",
+	"display": "form",
+	"access": [
+		{
+			"roles": [
+				"627233d00b924a43a3d1c6f9",
+				"627233d00b924a6185d1c6fe",
+				"627233d00b924a9145d1c703"
+			],
+			"type": "read_all"
+		}
+	],
+	"submissionAccess": [],
+	"controller": "",
+	"properties": {},
+	"settings": {},
+	"name": "textFieldTest",
+	"path": "textfieldtest",
+	"project": "627233d00b924a2803d1c6f2",
+	"created": "2022-08-23T10:37:27.581Z",
+	"modified": "2022-08-24T10:06:49.930Z",
+	"machineName": "ucobwatlibrybyy:textFieldTest"
+}

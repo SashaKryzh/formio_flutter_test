@@ -13,4 +13,9 @@ function createForm(json, data) {
 
 function updateForm(json, data) {
   gForm.form = json;
+  // gForm.checkValidity(null, true, null, false);
+}
+
+function checkValidity() {
+  return gForm.checkValidity(null, true, null, false);
 }

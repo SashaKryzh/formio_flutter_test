@@ -14,11 +14,6 @@ dependencies:
 
   webview_flutter_plus: ^0.3.0+2
 
-  # formio_flutter:
-  #   git:
-  #     url: https://github.com/emtec-de/formio_flutter
-  #     ref: master
-
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -31,13 +26,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/form.html
-    - assets/form.json
-    - assets/simple_form.json
-    - assets/simple_form_2.json
-    - assets/script.js
-    - assets/formio.full.min.js
-    - assets/formio.full.min.css
-    - assets/bootstrap.min.css
-    - assets/example_1.json
-    - assets/example_2.json
+    - assets/form_page/
+    - assets/form_page/formio/
+    - assets/forms/
